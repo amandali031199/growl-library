@@ -1,16 +1,12 @@
 import React, { useEffect } from 'react'
-import styles from './styles.module.css'
+
 import './growl.css'
 
-export const ExampleComponent = ({ text }) => {
-  return <div className={styles.test}>Example Component: {text}</div>
-}
-
 export const Growl = ({ active, message, onDismissed }) => (
-  return (<div className={`growl${active ? " active" : ""}`}>
+  <div className={`growl${active ? " active" : ""}`}>
     {message}
     <div onClick={onDismissed} className="growl-close" />
-  </div>)
+  </div>
 )
 
 export function useGrowl() {
